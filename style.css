@@ -1,0 +1,249 @@
+/* Outline all groups in red for debugging */
+/* .group1, .group2, .group3 {
+    outline: 2px solid red;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Google Sans Code', sans-serif;
+}
+:root{
+    --primary-color: #fff200;
+    --secondary-color: #0077cc;
+    --background-color: #53ff44;
+    --text-color: #615c5c;
+}
+html{
+    font-size: 10px;
+    height: 100%;
+}
+body{
+    font-family: 'Google Sans Code', sans-serif;
+    background-color: #f9f9f9;
+    color:#ffffff;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.profile-image img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.description{
+    
+    margin-top: 1rem;
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.title{
+    margin-left: 3rem;
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: .3rem;
+    color: var(--secondary-color)
+}
+.subtitle{
+    margin-left: 3rem;
+    margin-top: .1rem;
+    margin-bottom: .1rem;
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.date{
+     margin-top: 1rem;
+     margin-bottom: .1rem;
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* Make container take full viewport height and use grid rows */
+.container{
+    max-width: 1000px;
+    width: 80%;
+    flex: 1 0 auto;
+    margin: 0 auto;
+    padding: 5rem;
+    display: grid;
+    background: rgb(24, 24, 24);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 4rem;
+}
+@media only screen and (max-width: 768px){
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+
+.profile{
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+
+.group1{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    grid-column: 1;
+}
+
+.group2{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    grid-column: 2;
+}
+
+@media only screen and (max-width: 768px){
+    .group1,.group2{
+      flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.group3{
+    display: flex;
+    grid-template-rows: 1fr;
+    flex-direction: row;
+    gap: 5rem;
+    grid-column: 1/3;
+}
+
+/* Profile */
+.profile-container {
+display: flex;
+gap: 2rem;
+
+}
+
+.profile-image {
+    max-width: 250px;
+}
+
+.first-name {
+    color: white;
+     font-weight: 200;
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-transform: uppercase;
+    display: block;
+}
+.last-name {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: clamp(2rem, 8vw, 4rem);
+    
+}
+
+.profile-title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.downloadBtn{
+    display: block;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.downloadBtn:hover{
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 768px){
+    .profile-container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-image{
+        max-width: 200px;
+    }
+}
+
+/* Expertise */
+
+.info{
+    margin-top: 1rem;
+    margin-left: 0rem;
+    line-height: 2;
+}
+
+/*interests*/
+.interest_items{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+   
+}
+
+ .interest-item{
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        color: var(--text-color);
+        justify-content: center;
+ }
+
+ .interest svg{
+    width: 2rem;
+ }
+
+ .social-items{
+    margin-top: 2rem;
+ }
+.social-item{
+margin-top: 1.5rem;
+font-size: 1.5rem;
+display: flex;
+gap: .5rem;
+align-items: center;
+justify-content: flex-start;
+color: var(--text-color);
+
+
+}
+
+.social-item:hover{
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
+social-item svg {
+    width: 2rem;
+}
+/* 
+         <h1 class="subtitle">---placeholder---</h1>
+            <p class="description">---placeholder---</p>
+
+
+*/
